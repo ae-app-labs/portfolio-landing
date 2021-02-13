@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+$bg-dark: #232426;
+$bg-light:#272F32;
+$almost-white:#D3D3D3;
+$primary-color: #5FA7C3;
+
+body{
+    margin: 0;
+    background-color: $bg-dark;
+    font-family: 'Montserrat';
+    color: $almost-white;
+    height: 100vh;
+    width: 100%;
+}
+h1, h2, h3 {
+    margin:0;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: $almost-white;
+}
+
+.header-container{
+    background-color: $bg-light;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    .logo{
+        font-family: 'Lora';
+        font-weight: bold;
+        span{
+            color: $primary-color;
+            font-size: 3em;
+        }
+    }
+    ul{
+        display: flex;
+        a{
+            display: block;
+            padding: 0 1.2em;
+        }
+    }
+}
+.header-social{
+    display: none;
+}
+
+.hero{
+    padding: 4em;
+    text-align: center;
+    h1 {
+        font-size: 3em;
+    }
+    h3 {
+        margin: 1.5em 0;
+    }
+    h1 span {
+        color: $primary-color;
+    }
+    p {
+        line-height: 1.5em;
+    }
+}
+
+.skills-container{
+    background-color: $primary-color;
+    padding-bottom: 3em;;
+    .skills-title{
+        text-align: center;
+        padding: 3em;
+    }
+    .skills-list{
+        background-color: $bg-dark;
+        padding: 3em;
+        line-height: 1.5em;
+        margin-bottom: 2em;
+    }
+    h3{
+        color: $primary-color;
+    }
+}
+
+footer{
+    padding:1em;
+    font-size: .8em;
+}
+
+// Media Queries
+@media only screen and (min-width: 850px) {
+    .hero .content{
+        text-align: left;
+        display: grid;
+        place-content: center;
+    }
+    .hero{
+        display: grid;
+        grid-template-columns: 50% auto;
+    }
+    .header-social{
+        display: unset;
+        margin: auto 0;
+    }
+    header, footer{
+        padding: 1em 2em 1em 4em;
+    }
+    .skills-container{
+        display: grid;
+        grid-template-columns: 50% 40% auto;
+        padding-bottom: 0;
+        .skills-list{
+            margin-bottom: 0;
+        }
+    }
+}
